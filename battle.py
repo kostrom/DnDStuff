@@ -1,5 +1,5 @@
 from player import Player, calcHP
-from arena import attackRolls
+from arena import attack_rolls
 from dice import roll
 
 ##################################################################
@@ -87,10 +87,10 @@ for x in range(battles): #rematches
             break
         if detailedTracking:print("\nRound "+str(i)) #spacing for each round
         if firstPlayer == "p1":
-            if attackRolls(p1, p2, detailedTracking) == "death" or attackRolls(p2, p1, detailedTracking) == "death":
+            if attack_rolls(p1, p2, detailedTracking) == "death" or attack_rolls(p2, p1, detailedTracking) == "death":
                 break;
         else:
-            if attackRolls(p2, p1, detailedTracking) == "death" or attackRolls(p1, p2, detailedTracking) == "death":
+            if attack_rolls(p2, p1, detailedTracking) == "death" or attack_rolls(p1, p2, detailedTracking) == "death":
                 break;
 
     if p1.hp <= 0:
