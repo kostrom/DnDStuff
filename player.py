@@ -27,7 +27,6 @@ class Player():
         self.wentFirstWon = wentFirstWon
         self.critCounter = critCounter
         self.hitsCounter = hitsCounter
-        self.maxhp = self.calcHP
         self.detailedTracking = detailedTracking
 
     def takeDamage(self, damage):
