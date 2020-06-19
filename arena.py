@@ -23,7 +23,7 @@ def attack_rolls(player, enemy, detailed_tracking):
                     if detailed_tracking:
                         print("Sneak Attack dice: {}d{}, damage: {}".format(
                             sneak_attack_damage_range[0]*2, 6, sneak_attack_damage_roll))
-                    enemy.takeDamage(sneak_attack_damage_roll)
+                    enemy.take_damage(sneak_attack_damage_roll)
             else:
                 if detailed_tracking:
                     print("{} Atk: ({}), total: {} HIT!".format(
@@ -37,12 +37,12 @@ def attack_rolls(player, enemy, detailed_tracking):
                     if detailed_tracking:
                         print("Sneak Attack dice: {}d{}, damage: {}".format(
                             sneak_attack_damage_range[0], 6, sneak_attack_damage_roll))
-                    enemy.takeDamage(sneak_attack_damage_roll)
+                    enemy.take_damage(sneak_attack_damage_roll)
             attack_damage = damage_roll+atk[3]
             if detailed_tracking:
                 print(damage_string)
                 print("Dealth {} dmg, ({})+{}".format(attack_damage, damage_roll, atk[3]))
-            enemy.takeDamage(attack_damage)
+            enemy.take_damage(attack_damage)
             player.hitsCounter += 1
         else:
             if detailed_tracking:
