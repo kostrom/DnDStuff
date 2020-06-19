@@ -3,6 +3,7 @@ from unittest import TestCase, main
 from unittest.mock import patch
 
 from player import Player
+
 from arena import attack_rolls
 
 def fixedroller(count, die):
