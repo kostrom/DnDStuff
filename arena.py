@@ -13,7 +13,7 @@ def attack_rolls(player, enemy, detailed_tracking):
                 if detailed_tracking:
                     print("{} Atk: ({}), total: {} CRITICAL HIT!".format(
                         player.name, flat_roll, attack_roll))
-                damage_roll = roll(damage_range[0]*2, damage_range[1]*2)
+                damage_roll = roll(atk[1] * 2, atk[2])
                 player.critCounter += 1
                 damage_string = "Crit Dmg: {}d{}+{} (range: {}-{})".format(
                     atk[1]*2, atk[2], atk[3], damage_range[0]*2+atk[3], damage_range[1]*2+atk[3])
@@ -28,7 +28,7 @@ def attack_rolls(player, enemy, detailed_tracking):
                 if detailed_tracking:
                     print("{} Atk: ({}), total: {} HIT!".format(
                         player.name, flat_roll, attack_roll))
-                damage_roll = roll(damage_range[0], damage_range[1])
+                damage_roll = roll(atk[1], atk[2])
                 damage_string = "Dmg: {}+{} (range: {}-{})".format(
                     atk[2], atk[3], damage_range[0]+atk[3], damage_range[1]+atk[3])
                 if player.sneakAtkDice > 0:
